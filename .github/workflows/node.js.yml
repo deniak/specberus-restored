@@ -36,7 +36,7 @@ jobs:
         nickname: gh-action-notifier
         tls: true
         message: |
-          ${{ github.actor }} pushed to ${{ github.repository }}. ${{ github.event.pull_request.html_url }} FAILED https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          ${{ github.actor }} pushed to ${{ github.repository }}. ${{ github.event.pull_request.html_url }} \x02\x0304FAILED\x03\x02 https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
     - name: Notify success
       uses: rectalogic/notify-irc@v1
       if: ${{ success() }}
